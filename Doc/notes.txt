@@ -31,7 +31,40 @@ pwsh > prjRoot\Source\XXX.Tests
 Mod3: Asserts
 ************************************************************************************************************************
 
+It is OK and probably better to have multiple asserts in a test provided they are all related to the behaviour being 
+tested by this test. Unrelated assert are a bad practice though.
+
+ 
+
+
 
 ************************************************************************************************************************
 
 ************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
