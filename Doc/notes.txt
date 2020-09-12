@@ -1,0 +1,37 @@
+
+
+Testing .NET Code with xUnit.net: Getting Started
+https://app.pluralsight.com/library/courses/dotnet-core-testing-code-xunit-dotnet-getting-started/
+
+************************************************************************************************************************
+Mod2: Basics
+************************************************************************************************************************
+Test Framework:
+xUnit - a dll/library
+
+Test Runners:
+VS Test Explorer
+.Net Core CLI
+third party like ReSharper
+
+To add tets project via cmdline:
+pwsh > prjRoot\Source
+> mkdir GameEngine.Tests
+> cd .\GameEngine.Tests
+> dotnet new xunit 
+>  dotnet add reference ..\GameEngine\GameEngine.csproj
+> cd ..
+>  dotnet sln add .\GameEngine.Tests\GameEngine.Tests.csproj
+
+To run tests via cmdline:
+pwsh > prjRoot\Source\XXX.Tests
+> dotnet test
+
+************************************************************************************************************************
+Mod3: Asserts
+************************************************************************************************************************
+
+
+************************************************************************************************************************
+
+************************************************************************************************************************
