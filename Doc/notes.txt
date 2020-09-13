@@ -61,9 +61,18 @@ http://bit.ly/pstestrunner
 https://github.com/Microsoft/vstest-docs/blob/master/docs/report.md
 
 ************************************************************************************************************************
-TIP: Test Class is instantiated every single time before executing a Fact (test method) so mov any duplicate code to
-ctor
+TIP: Test Class is instantiated every single time before executing a Fact (test method) so move any duplicate code to
+ctor. This just helps with cleaner code. Test class is still being instantiated every single time  before each test method
+and therefore cretaing a new instance of _sut in ctor.
 
+If we want to work with a single instance of SUT we need to create a fixture class for sut
+Now the test class will get a fixture before every test method but it is the same instance. No new object creation before 
+each method 
+WARNING: since we share an instance, we must ensure that each test has no side effect and all tests can still be run in any order 
+
+
+
+  
  
 
 
