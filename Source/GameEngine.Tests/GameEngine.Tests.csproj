@@ -17,4 +17,10 @@
     <ProjectReference Include="..\GameEngine\GameEngine.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Data\TestData.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

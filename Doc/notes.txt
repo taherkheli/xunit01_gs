@@ -78,7 +78,11 @@ Using 'CollectionDefinitionAttribute' we can share a test context across multipl
 Mod5: Data-driven Tests
 ************************************************************************************************************************
 
+inline data via 'InlineData' attribute cannot be shared among two tests so we can create an internal class to expose the 
+test data as its property and tie this to tests via 'MemberData' attribute
 
+To beautify things, you can create your own custom attribute and provide a GetData() implementation which could then provide
+an in-memory test data or fetch it from a csv or even an external service/api
 
 ************************************************************************************************************************
 

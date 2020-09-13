@@ -141,6 +141,15 @@ namespace GameEngine.Tests
       Assert.PropertyChanged(_sut, "Health", () => _sut.TakeDamage(10));  // requires the class under test to be implementing INotifyPropertyChanged 
     }
 
+    [Theory]
+    //[MemberData(nameof(ExternalHealthDamageTestData.TestData), MemberType = typeof(ExternalHealthDamageTestData))]
+    [HealthDamageData]
+    public void TakeDamage(int damage, int expectedHealth)
+    {
+      _sut.TakeDamage(damage);
+      Assert.Equal(expectedHealth, _sut.Health);
+    }
+
     public void Dispose()
     {
       _output.WriteLine($"Disposing PlayerCharacter {_sut.FirstName}");
