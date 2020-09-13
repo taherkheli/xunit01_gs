@@ -34,13 +34,42 @@ Mod3: Asserts
 It is OK and probably better to have multiple asserts in a test provided they are all related to the behaviour being 
 tested by this test. Unrelated assert are a bad practice though.
 
+************************************************************************************************************************
+Mod4: Controlling test execution
+************************************************************************************************************************
+to get help
+> dotnet test /?
+
+control amount of detail via verbosity flag setting e.g. normal
+> dotnet test -v n
+
+************************************************************************************************************************
+Choosing what tests to run:
+What u can do in test explorer GUI, can also be done via cmdline. e.g. 
+pwsh > TestRoot
+> dotnet test --filter Category=Enemy 
+> dotnet test --filter "Category=Boss|Category=Enemy"
+
+************************************************************************************************************************
+
+To ensure that test run producs an output in the form of a trx file:
+> dotnet test --filter Category=Boss --logger:trx
+
+Here we used trx logegr that comes built-in but there are other loggers that can be plugged here to
+report tets run results in a way that can be fed to some ncie presentation. Details here:
+http://bit.ly/pstestrunner
+https://github.com/Microsoft/vstest-docs/blob/master/docs/report.md
+
+************************************************************************************************************************
+TIP: Test Class is instantiated every single time before executing a Fact (test method) so mov any duplicate code to
+ctor
+
  
 
 
 
 ************************************************************************************************************************
 
-************************************************************************************************************************
 
 
 
