@@ -65,15 +65,18 @@ TIP: Test Class is instantiated every single time before executing a Fact (test 
 ctor. This just helps with cleaner code. Test class is still being instantiated every single time  before each test method
 and therefore cretaing a new instance of _sut in ctor.
 
-If we want to work with a single instance of SUT we need to create a fixture class for sut
+If we want to work with a single instance of SUT in a test class we need to create a fixture class for sut
 Now the test class will get a fixture before every test method but it is the same instance. No new object creation before 
-each method 
+each method  => Sharing Context between Test Methods is a class
 WARNING: since we share an instance, we must ensure that each test has no side effect and all tests can still be run in any order 
 
+Now if we want to use the same fixture across multiple test classes => Sharing Context across multiple Test Classes
+Using 'CollectionDefinitionAttribute' we can share a test context across multiple test classes as doen for TestClass1 n 2
 
 
-  
- 
+************************************************************************************************************************
+Mod5: Data-driven Tests
+************************************************************************************************************************
 
 
 
